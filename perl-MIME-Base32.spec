@@ -4,11 +4,11 @@
 #
 Name     : perl-MIME-Base32
 Version  : 1.303
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/MIME-Base32-1.303.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/MIME-Base32-1.303.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libm/libmime-base32-perl/libmime-base32-perl_1.303-1.debian.tar.xz
-Summary  : 'Base32 encoder and decoder'
+Summary  : Base32 encoder / decoder
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-MIME-Base32-license = %{version}-%{release}
@@ -27,6 +27,7 @@ use MIME::Base32;
 Summary: dev components for the perl-MIME-Base32 package.
 Group: Development
 Provides: perl-MIME-Base32-devel = %{version}-%{release}
+Requires: perl-MIME-Base32 = %{version}-%{release}
 
 %description dev
 dev components for the perl-MIME-Base32 package.
@@ -45,7 +46,7 @@ license components for the perl-MIME-Base32 package.
 cd ..
 %setup -q -T -D -n MIME-Base32-1.303 -b 1
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/MIME-Base32-1.303/deblicense/
+cp -r %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/MIME-Base32-1.303/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
