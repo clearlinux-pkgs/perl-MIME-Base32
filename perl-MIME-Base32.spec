@@ -4,7 +4,7 @@
 #
 Name     : perl-MIME-Base32
 Version  : 1.303
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/MIME-Base32-1.303.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/MIME-Base32-1.303.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libm/libmime-base32-perl/libmime-base32-perl_1.303-1.debian.tar.xz
@@ -108,4 +108,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/MIME/Base32.pm
+/usr/lib/perl5/vendor_perl/5.30.3/MIME/Base32.pm
